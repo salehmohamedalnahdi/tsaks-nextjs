@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* header & footer */
+body{@apply bg-blue-400}
+body header{@apply flex md:justify-between  bg-blue-500 h-10 uppercase md:px-4 text-white}
+.title-signup{@apply flex md:items-center}
+body header h1{@apply font-bold md:text-xl }
+h2{@apply font-bold text-sm  md:pl-2}
+.pages{@apply flex md:items-center md:px-10 }
+body header h2{@apply mx-4 hover:scale-125 transition ease-out duration-500}
+body footer{@apply mt-2 text-white text-center py-6 bg-blue-500 font-semibold text-lg }
+
+/* home +fetch.js*/
+.main{@apply my-8 flex justify-center font-semibold} 
+.content{@apply bg-white grid grid-rows-2}
+.title{@apply text-center text-lg p-2}
+.tasks{@apply grid grid-cols-3 gap-4 md:pl-2 py-2}
+
+/*form.js*/
+.content-form{@apply flex justify-center mt-12 mb-12}
+.input-title{@apply block p-2  mb-1 border-2 border-blue-400 w-96 h-10}
+.submit{@apply block bg-red-500 text-white rounded-full px-4 py-2 w-fit hover:bg-gray-500}
+
+/* delete-button.js*/
+.delete{@apply flex justify-end pr-4}
+.delete-button{@apply text-red-500 rounded-full px-2 py-1 hover:bg-gray-500}
+.isDone{@apply flex justify-end}
+.true{@apply text-green-600}
